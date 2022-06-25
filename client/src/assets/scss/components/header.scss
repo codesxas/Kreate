@@ -1,8 +1,13 @@
 .header {
+  &.desktop-view {
+    @media only screen and (max-width: $media-xl) {
+      display: none;
+    }
+  }
+
   .row {
     align-items: center;
   }
-
   .brand-logo {
     color: $clr-base;
     display: flex;
@@ -11,13 +16,20 @@
 
     img {
       height: 4rem;
-      width: 4rem;
       margin-right: 1rem;
+
+      @media only screen and (max-width: $media-md) {
+        height: 3rem;
+      }
     }
 
     p {
       font-size: $fs-logo;
       margin: 0;
+
+      @media only screen and (max-width: $media-md) {
+        font-size: $fs-h1;
+      }
     }
   }
 
@@ -37,12 +49,62 @@
       font-size: $fs-base;
       color: rgba($clr-base, 0.7);
       position: relative;
-      padding-right: 4rem;
+      text-transform: uppercase;
+      font-family: $ff-alt-beta;
+      letter-spacing: 1.5px;
+
+      &:not(:last-child) {
+        padding-right: 4rem;
+      }
 
       svg {
         margin-left: 0.5rem;
-        font-size: 1.5rem;
-        color: rgba($clr-base, 0.4);
+        font-size: 1.2rem;
+        opacity: 0.5;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  &.mobile-view {
+    text-align: right;
+
+    @media only screen and (min-width: $media-xl) {
+      display: none;
+    }
+
+    .brand-logo {
+      justify-content: start;
+    }
+
+    .hamburger {
+      font-size: 3.5rem;
+
+      @media only screen and (max-width: $media-md) {
+        font-size: $fs-icons;
+      }
+      @media only screen and (max-width: $media-sm) {
+        font-size: calc($fs-icons - 0.1rem);
+      }
+    }
+  }
+
+  &.alt-view {
+    margin: 0 3rem;
+    @media only screen and (max-width: $media-xl) {
+      display: none;
+    }
+
+    .nav-list {
+      padding: 0rem;
+      border: none;
+      justify-content: start;
+      padding-left: 3rem;
+
+      .nav-link {
+        &:not(:last-child) {
+          padding-right: 2.5rem;
+        }
       }
     }
   }

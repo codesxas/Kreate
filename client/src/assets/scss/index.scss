@@ -15,5 +15,7 @@ html {
 }
 
 .container {
-  max-width: $media-xl;
+  @media only screen and (min-width: $media-xl) {
+    max-width: $media-xl;
+  }
 }

@@ -4,5 +4,12 @@
   svg {
     font-size: $fs-icons;
     color: rgba($clr-base, 0.8);
+
+    @media only screen and (max-width: $media-md) {
+      font-size: calc($fs-icons - 0.5rem);
+    }
+    @media only screen and (max-width: $media-sm) {
+      font-size: calc($fs-icons - 0.7rem);
+    }
   }
 }

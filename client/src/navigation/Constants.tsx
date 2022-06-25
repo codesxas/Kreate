@@ -24,7 +24,7 @@ export const routes = [
 
   {
     path: "/cart",
-    element: <Cart />,
+    element: <Cart props={{page: "Cart"}} />,
     children: [
       //   { path: "contact/:id", element: <Contact /> },
       //   { path: "history/:id", element: <History /> },
