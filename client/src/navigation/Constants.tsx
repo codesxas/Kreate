@@ -19,7 +19,7 @@ export const routes = [
   {
     path: "/category",
     element: <Default />,
-    children: [{ path: "/:id", element: <Category /> }],
+    // children: [{ path: "/:id", element: <Category /> }],
   },
 
   {

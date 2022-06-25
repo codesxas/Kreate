@@ -1,0 +1,29 @@
+.main-banner {
+  padding: 14rem;
+  position: relative;
+
+  .bg-circle {
+    .btn-link {
+      width: 9rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #333;
+    }
+
+    .styled-title {
+      color: $clr-secondary;
+    }
+  }
+
+  &::before {
+    content: "";
+    top: 0;
+    left: -20rem;
+    height: 100%;
+    width: 120%;
+    position: absolute;
+    background-image: url(https://cdn.shopify.com/s/files/1/0457/4969/8724/files/slideshow-v2-img3.jpg?v=1598236683);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+}

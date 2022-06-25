@@ -1,0 +1,19 @@
+@import "./variables/variables.scss";
+@import "./pages/home.scss";
+@import "./base/base.scss";
+@import "./components/index.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: $ff-base;
+  color: $clr-base;
+}
+
+html {
+  font-size: 10px;
+}
+
+.container {
+  max-width: $media-xl;
+}

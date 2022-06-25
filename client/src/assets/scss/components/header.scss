@@ -1,0 +1,49 @@
+.header {
+  .row {
+    align-items: center;
+  }
+
+  .brand-logo {
+    color: $clr-base;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 4rem;
+      width: 4rem;
+      margin-right: 1rem;
+    }
+
+    p {
+      font-size: $fs-logo;
+      margin: 0;
+    }
+  }
+
+  .nav-icon {
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  .nav-list {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0 3rem;
+    border-top: 1px dashed rgba($clr-base, 0.2);
+
+    .nav-link {
+      font-size: $fs-base;
+      color: rgba($clr-base, 0.7);
+      position: relative;
+      padding-right: 4rem;
+
+      svg {
+        margin-left: 0.5rem;
+        font-size: 1.5rem;
+        color: rgba($clr-base, 0.4);
+      }
+    }
+  }
+}
