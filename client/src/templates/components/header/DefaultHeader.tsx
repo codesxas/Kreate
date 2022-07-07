@@ -1,13 +1,8 @@
 import React from "react";
-import {
-  HiUser,
-  HiSearch,
-  HiOutlineHeart,
-  HiOutlineShoppingCart,
-} from "react-icons/hi";
 
-import { IoChevronDown, IoChevronUp, IoMenuSharp } from "react-icons/io5";
 import Logo from "../../../assets/images/logo.png";
+import NavList from "./components/desktop/NavList";
+import NavIcons from "./components/NavIcons";
 
 function Header() {
   return (
@@ -18,42 +13,12 @@ function Header() {
           <p>Kreate</p>
         </div>
 
-        <div className="col-lg-8 nav-list">
-          <div className="nav-link">
-            Personal Care
-            <IoChevronDown />
-          </div>
-          <div className="nav-link">
-            Home & Living
-            <IoChevronDown />
-          </div>
-          <div className="nav-link">
-            Clothing
-            <IoChevronDown />
-          </div>
-          <div className="nav-link">
-            Pet Care
-            <IoChevronDown />
-          </div>
-          <div className="nav-link">
-            Gifting
-            <IoChevronDown />
-          </div>
+        <div className="col-lg-8">
+          <NavList />
         </div>
 
         <div className="col-lg-2">
-          <span className="nav-icon">
-            <HiUser />
-          </span>
-          <span className="nav-icon">
-            <HiSearch />
-          </span>
-          <span className="nav-icon">
-            <HiOutlineHeart />
-          </span>
-          <span className="nav-icon">
-            <HiOutlineShoppingCart />
-          </span>
+          <NavIcons isMobile={false} />
         </div>
       </div>
     </div>

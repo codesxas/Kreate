@@ -1,4 +1,3 @@
-import React from "react";
 import Twig from "../../../assets/images/twig.png";
 import PromoBanner from "../../../assets/images/promo-banner.jpeg";
 

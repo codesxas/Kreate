@@ -12,4 +12,18 @@
       font-size: calc($fs-icons - 0.7rem);
     }
   }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .home {
+    .grid {
+      margin: 0 5rem;
+    }
+  }
 }

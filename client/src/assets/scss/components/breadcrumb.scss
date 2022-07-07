@@ -3,12 +3,10 @@
   margin-top: 4rem;
 
   .bc-item {
-    list-style: none;
     display: flex;
     align-items: center;
     font-size: $fs-h6;
     transition: all 0.5s ease 0s;
-    font-family: $ff-alt-beta;
 
     &:not(:last-child) {
       margin-right: 1rem;

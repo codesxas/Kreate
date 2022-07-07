@@ -1,0 +1,34 @@
+.bs-sec {
+  &.typ-filter {
+    display: flex;
+    justify-content: space-between;
+
+    .product-variation,
+    .product-filter {
+      display: flex;
+    }
+
+    .product-variation {
+      font-size: $fs-h6;
+      text-transform: uppercase;
+
+      li {
+        font-weight: 500;
+        color: rgba($clr-base, 0.4);
+        font-family: $ff-alt-gamma;
+        letter-spacing: 1px;
+        cursor: pointer;
+        margin: 0 2rem 1rem;
+        transition: all 0.5s ease-in-out;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:hover, &.active {
+            color: $clr-base;
+        }
+      }
+    }
+  }
+}

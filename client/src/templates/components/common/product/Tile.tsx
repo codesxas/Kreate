@@ -1,20 +1,68 @@
 import React from "react";
+import {
+  HiSearch,
+  HiOutlineHeart,
+  HiOutlineShoppingCart,
+} from "react-icons/hi";
+import { IoShuffleSharp } from "react-icons/io5";
 
-function Tile() {
+type Props = {
+  url: string;
+  alt_description: string;
+  description: string;
+  owner_name: string;
+  actual_price: number;
+  discounted_price: number;
+};
+
+function Tile(props: Props) {
+  const { url, alt_description, owner_name, actual_price, discounted_price } =
+    props;
+
   return (
     <div className="tile">
       <div className="img-wrap">
         <span className="discount">-22%</span>
-        <img src="https://htmldemo.net/learts/learts/assets/images/product/s328/product-13.webp" alt="" />
+
+        <span className="favorite">
+          <HiOutlineHeart />
+        </span>
+
+        <img src={url} alt="" />
       </div>
 
       <div className="info-wrap">
-        <p className="product-name">Spicy Mango Pickle (500Kg)</p>
-        <p className="owner-name">By Home Bliss</p>
-        <p className="product-price">
-          <span className="actual-price">₹ 218</span>
-          <span className="discounted-price">₹ 170</span>
+        <p className="product-name">
+          {alt_description ? alt_description : "Item"}
         </p>
+
+        <p className="owner-name">{owner_name}</p>
+
+        <p className="product-price">
+          {discounted_price ? (
+            <React.Fragment>
+              <span className="actual-price">₹{actual_price}</span>
+              <span className="discounted-price">₹{discounted_price}</span>
+            </React.Fragment>
+          ) : (
+            <span className="price">₹{actual_price}</span>
+          )}
+        </p>
+      </div>
+
+      <div className="act-btn">
+        <div className="btn-item">
+          <span className="custom-tooltip">Search</span>
+          <HiSearch />
+        </div>
+        <div className="btn-item">
+          <span className="custom-tooltip">Add to Cart</span>
+          <HiOutlineShoppingCart />
+        </div>
+        <div className="btn-item">
+          <span className="custom-tooltip">Compare</span>
+          <IoShuffleSharp />
+        </div>
       </div>
     </div>
   );

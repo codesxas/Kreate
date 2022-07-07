@@ -1,11 +1,8 @@
 // layouts
-import LandingPage from "../templates/layouts/LandingPage";
-import Default from "../templates/layouts/Default";
-import Cart from "../templates/layouts/Cart";
+import { Cart, Default, LandingPage } from "../templates/layouts";
 
 // pages
-import Home from "../templates/pages/Home";
-import Category from "../templates/pages/Category";
+import { Home, Category, Pdp } from "../templates/pages";
 import NotFound from "../templates/error/NotFound";
 
 export const routes = [
@@ -19,12 +16,20 @@ export const routes = [
   {
     path: "/category",
     element: <Default />,
-    // children: [{ path: "/:id", element: <Category /> }],
+    children: [
+      {
+        path: "",
+        element: <Category />,
+        // children: [{ path: "product", element: <Pdp /> }],
+      },
+      { path: ":id", element: <Category props={{ page: "Cart" }} /> },
+      { path: "product", element: <Pdp props={{ page: "Cart" }} /> },
+    ],
   },
 
   {
     path: "/cart",
-    element: <Cart props={{page: "Cart"}} />,
+    element: <Cart props={{ page: "Cart" }} />,
     children: [
       //   { path: "contact/:id", element: <Contact /> },
       //   { path: "history/:id", element: <History /> },

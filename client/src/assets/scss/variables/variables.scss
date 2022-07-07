@@ -1,7 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=ABeeZee&family=Jost&family=Marcellus&family=Ms+Madi&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Marcellus+SC&display=swap");
 /* font-family */
-$ff-base: "Marcellus", serif;
+$ff-base: "Marcellus SC", serif;
 $ff-alt-alpha: "Ms Madi", cursive;
 $ff-alt-beta: "ABeeZee", sans-serif;
 $ff-alt-gamma: "Jost", sans-serif;
@@ -49,9 +48,11 @@ $clr-ntrl-max: #000;
 $clr-orange: #f2b989;
 $clr-teal: #abd2c9;
 $clr-pink: #f3b2c8;
+$clr-red: #f8796c;
 $clr-green: #9dc06f;
 $clr-black: #2b2a29;
 $clr-gray: #a1a1a1;
+$clr-gray-dk: #7e7e7e;
 
 /* screen sizes */
 $media-xs: 320px;
