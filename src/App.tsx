@@ -5,7 +5,7 @@ import RouterConfig from "./navigation/RouterConfig";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <RouterConfig />
       </BrowserRouter>
     </div>
