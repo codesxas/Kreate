@@ -6,16 +6,9 @@ import {
 } from "react-icons/hi";
 import { IoShuffleSharp } from "react-icons/io5";
 
-type Props = {
-  url: string;
-  alt_description: string;
-  description: string;
-  owner_name: string;
-  actual_price: number;
-  discounted_price: number;
-};
+import { ProductInterface } from "../../../../interfaces";
 
-function Tile(props: Props) {
+function Tile(props: ProductInterface) {
   const { url, alt_description, owner_name, actual_price, discounted_price } =
     props;
 
